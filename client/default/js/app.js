@@ -20,7 +20,7 @@
     launch: function () {
       console.log('showing main loading mask');
       loadingMask.show();
-      console.log('launching app');
+      console.log('launching app____');
       
       if (Ext.is.Android) {
         Ext.Anim.override({
