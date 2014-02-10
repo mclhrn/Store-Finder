@@ -31,10 +31,10 @@
       this.views.mainView = new this.views.MainView({
         listeners: {
           touchstart: function(touchEvent) {
-             if (navigator.userAgent.match(/Android/i)) {
+             // if (navigator.userAgent.match(/Android/i)) {
                console.log("touchStart preventDefault called");
                touchEvent.preventDefault();
-             }
+             //}
           },
           afterrender: function () {
             console.log('mainview afterrender');
