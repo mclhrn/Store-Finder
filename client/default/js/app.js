@@ -40,6 +40,7 @@
               console.log('mainview afterrender');
               Ext.getCmp('storesBackButton').hide();
             }
+
           }
       });
     }
