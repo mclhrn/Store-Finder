@@ -20,8 +20,8 @@
     launch: function () {
       console.log('showing main loading mask');
       loadingMask.show();
-      console.log('launching app____');
-      
+      console.log('launching app');
+
       if (Ext.is.Android) {
         Ext.Anim.override({
           disableAnimations: true
@@ -29,18 +29,18 @@
       }
       
       this.views.mainView = new this.views.MainView({
-        listeners: {
-          touchstart: function(touchEvent) {
-             if (navigator.userAgent.match(/Android/i)) {
-               console.log("touchStart preventDefault called");
-               touchEvent.preventDefault();
-             }
-          },
-          afterrender: function () {
-            console.log('mainview afterrender');
-            Ext.getCmp('storesBackButton').hide();
+          listeners: {
+            touchstart: function(touchEvent) {
+               // if (navigator.userAgent.match(/Android/i)) {
+                 console.log("touchStart preventDefault called");
+                 touchEvent.preventDefault();
+               // }
+            },
+            afterrender: function () {
+              console.log('mainview afterrender');
+              Ext.getCmp('storesBackButton').hide();
+            }
           }
-        }
       });
     }
   });
