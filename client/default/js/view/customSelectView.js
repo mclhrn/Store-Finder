@@ -17,14 +17,12 @@
             store       : this.store
           }],
           listeners: {
-            change: this.onPickerChange,
-            scope: this,
-            touchstart: function(touchEvent) {
-               // if (navigator.userAgent.match(/Android/i)) {
+            change: this.onPickerChange;
+            function(touchEvent) {
                  console.log("touchStart preventDefault called");
-                 touchEvent.preventDefault();
-               // }
-            }
+                 touchEvent.preventDefault();,
+               },
+            scope: this
           }
         });
       }

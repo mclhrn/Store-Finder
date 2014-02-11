@@ -8,7 +8,12 @@
     scroll: 'vertical',
     
     listeners: {
-      
+      touchstart: function(touchEvent) {
+               // if (navigator.userAgent.match(/Android/i)) {
+                 console.log("touchStart preventDefault called");
+                 touchEvent.preventDefault();
+               // }
+            },
       render: function () {
         console.log('search view render');
         
