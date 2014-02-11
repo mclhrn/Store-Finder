@@ -17,11 +17,7 @@
             store       : this.store
           }],
           listeners: {
-            change: this.onPickerChange;
-            function(touchEvent) {
-                 console.log("touchStart preventDefault called");
-                 touchEvent.preventDefault();,
-               },
+            change: this.onPickerChange,
             scope: this
           }
         });
