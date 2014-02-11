@@ -18,7 +18,13 @@
           }],
           listeners: {
             change: this.onPickerChange,
-            scope: this
+            scope: this,
+            touchstart: function(touchEvent) {
+               // if (navigator.userAgent.match(/Android/i)) {
+                 console.log("touchStart preventDefault called");
+                 touchEvent.preventDefault();
+               // }
+            }
           }
         });
       }

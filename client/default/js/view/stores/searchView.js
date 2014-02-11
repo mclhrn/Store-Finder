@@ -8,6 +8,7 @@
     scroll: 'vertical',
     
     listeners: {
+      
       render: function () {
         console.log('search view render');
         
@@ -76,9 +77,6 @@
       flex: 1,
       handler: function (el, e) {
         var county, product;
-
-        console.log("getting somewhere_________________________________________!?");
-        e.preventDefault();
         
         county = Ext.getCmp('countySelect').getValue();
         product = Ext.getCmp('productSelect').getValue();
