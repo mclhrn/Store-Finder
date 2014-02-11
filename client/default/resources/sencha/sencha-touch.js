@@ -9445,15 +9445,6 @@ Ext.Viewport = new(Ext.extend(Ext.util.Observable, {
         }
         if (!Ext.desktop) {
             document.addEventListener("touchstart", Ext.createDelegate(a.onTouchStartCapturing, a), true);
-
-
-            function onStart ( touchEvent ) {
-              if( navigator.userAgent.match(/Android/i) ) {
-                touchEvent.preventDefault();
-              }
-          }
-
-
         }
     },
     init: function (c, b) {
